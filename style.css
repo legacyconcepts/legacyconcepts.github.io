@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-h1 {
+.loading-message {
     font-size:;
-    position:center;
     text-align: center;
     font-family: 'Source Code Pro';
-    padding-top: 50%;
+    padding-top: 20px;
     padding-right: 50%;
     padding-left: 50%;
     padding-bottom: 50%;
