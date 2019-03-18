@@ -153,3 +153,8 @@ a {
 .blinky a:hover {
     color:Red;
 }
+.bioheader {
+    font-weight:bold;
+    color: grey;
+    text-decoration: overline;
+}
