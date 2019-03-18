@@ -76,6 +76,7 @@ a {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+    
     font-family: 'Source Code Pro';
 }
 
@@ -131,4 +132,16 @@ a {
     to {
         opacity: 1;
     }
+}
+.menu:link, .menu:visited {
+  background-color:slategray;
+  color: white;
+  padding: 14px 25px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+}
+
+.menu:hover, .menu:active {
+  background-color: lightsteelblue;
 }
