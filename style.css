@@ -145,3 +145,6 @@ a {
 .menu:hover, .menu:active {
   background-color: lightsteelblue;
 }
+.blinky a:hover {
+    color:Red;
+}
