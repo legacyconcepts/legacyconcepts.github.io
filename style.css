@@ -175,7 +175,7 @@ button {
 }
 .parallax1 {
   /* The image used */
-  background-image: url("../../legacyconcepts/legacyconcepts.github.io/Images/Little%20Robot%20Billy.jpg");
+  background-image: url("Images/Little%20Robot%20Billy.jpg");
 
   /* Set a specific height */
   min-height: 600px; 
@@ -189,7 +189,7 @@ button {
 }
 .parallax2 {
   /* The image used */
-  background-image: url("../../legacyconcepts/legacyconcepts.github.io/Images/Billy_2.jpg");
+  background-image: url("Images/Billy_2.jpg");
 
   /* Set a specific height */
   min-height: 600px; 
