@@ -12,6 +12,7 @@ html {
     text-align: center;
     margin-left: 20%;
     margin-right: 20%;
+    scroll-behavior: smooth;
 }
 p {
     font-family: 'Source Code Pro';
@@ -171,4 +172,18 @@ button {
 }
 .billyheading {
     color:black;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../../legacyconcepts/legacyconcepts.github.io/Images/Little%20Robot%20Billy.jpg");
+
+  /* Set a specific height */
+  min-height: 600px; 
+    min-width: 99%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%;
 }
