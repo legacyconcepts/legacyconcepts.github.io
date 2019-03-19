@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
 .loading-message {
     text-align: center;
     font-size:10pt;
@@ -214,4 +216,17 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 65%;
+}
+.sofiaheading {
+    font-family: 'Amatic SC';
+    font-size:50pt;
+    color:deepskyblue;
+}
+.sofia {
+    font-family: 'Questrial';
+    background-color: transparent;
+}
+.sofialink {
+    color: purple;
+    text-decoration: underline
 }
