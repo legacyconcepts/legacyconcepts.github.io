@@ -201,3 +201,17 @@ button {
   background-repeat: no-repeat;
   background-size: 65%;
 }
+.parallax3 {
+  /* The image used */
+  background-image: url("../../legacyconcepts/legacyconcepts.github.io/Images/Billy%203.jpg");
+
+  /* Set a specific height */
+  min-height: 600px; 
+    min-width: 99%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+}
