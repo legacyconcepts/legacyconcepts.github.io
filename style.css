@@ -242,6 +242,19 @@ button {
 
 }
 .tafp {
-    font-family: 'Rubik Mono One';
-    color: 
+    font-family: 'Quicksand';
+    color: dimgrey;
+    
+}
+.tafbody { 
+  background: url(Images/CamoBG.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    margin-right: none;
+    margin-left: none;
+}
+image1 {
+    max-width: 70%;
 }
