@@ -233,3 +233,10 @@ button {
 .oops {
     font-family: 'Source Code Pro';
 }
+.tafheader {
+    width: 50%;
+    align-content: center;
+    position: sticky;
+    max-width: 50%;
+
+}
