@@ -258,3 +258,7 @@ button {
 image1 {
     max-width: 70%;
 }
+.topnav a.new {
+  background-color: burlywood;
+  color: white;
+}
