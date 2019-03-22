@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 html {
     text-align:center;
+    font-family: 'Poiret One';
 }
 h1 {
     text-align: center;
@@ -24,6 +25,10 @@ h1 {
     font-family: 'Poiret One';
     font-weight: bold;
     padding-top: px;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 
