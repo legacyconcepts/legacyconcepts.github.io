@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 @import url('https://fonts.googleapis.com/css?family=Muli|Quicksand|Rubik+Mono+One');
+@import url('https://fonts.googleapis.com/css?family=GFS+Didot');
 .loading-message {
     text-align: center;
     font-size:10pt;
@@ -261,4 +262,7 @@ image1 {
 .topnav a.new {
   background-color: burlywood;
   color: white;
+}
+.homepagequote {
+    font-weight: bold;  
 }
