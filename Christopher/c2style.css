@@ -11,6 +11,7 @@ h1 {
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -o-animation: fadein 2s; /* Opera */
+    scroll-behavior: smooth;
 }
 #c2heading {
     padding-top: 300px;
@@ -56,6 +57,15 @@ a.arrow:hover {
 #blankspace {
     color:transparent
 }
+.clearlink {
+    font-size: 4em;
+    background-color: cadetblue;
+}
+a.clearlink:hover {
+    background-color: white;
+    cursor: crosshair;
+}
+
 
 
 
