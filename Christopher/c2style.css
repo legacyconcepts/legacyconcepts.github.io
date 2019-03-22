@@ -30,6 +30,7 @@ h1 {
 }
 .typewriter h1 {
   font-family: Poiret One; /* Web-safe typewriter-like font */
+    color: dimgrey
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -41,7 +42,20 @@ h1 {
     padding-top: 30px;
     width: 430px;
 }
-
+.arrow {
+    font-size: 5em;
+    text-decoration: none;
+    color: cadetblue;
+    
+    
+    
+}
+a.arrow:hover {
+    color:black;
+}
+#blankspace {
+    color:transparent
+}
 
 
 
