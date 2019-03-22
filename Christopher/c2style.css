@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 html {
     text-align:center;
     font-family: 'Poiret One';
@@ -22,13 +23,16 @@ h1 {
     -o-animation: fadein 2s; /* Opera */
 }
 #subtitle {
-    font-family: 'Poiret One';
+    font-family: 'Source Code Pro';
     font-weight: bold;
     padding-top: px;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+    letter-spacing: .15em;
+}
+.typewriter {
+  margin: 0 auto;
+  overflow: auto;
+  white-space: no-wrap;
+    border-right: .15em solid orange;
 }
 
 
