@@ -8,7 +8,7 @@ h1 {
     -o-animation: fadein 2s; /* Opera */
 }
 #c2heading {
-    padding-top: 25%;
+    padding-top: 300px;
     animation: fadein 2s;
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
