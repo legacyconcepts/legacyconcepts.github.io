@@ -28,11 +28,20 @@ h1 {
     padding-top: px;
     letter-spacing: .15em;
 }
-.typewriter {
-  margin: 0 auto;
-  overflow: auto;
-  white-space: no-wrap;
-    border-right: .15em solid orange;
+.typewriter h1 {
+  font-family: monospace; /* Web-safe typewriter-like font */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+    animation-delay: 2s;
+  animation: 
+    typing 3.5s steps(30, end),
+    blinking-cursor .5s step-end infinite;
+    font-size: 12pt;
+    padding-top: 30px;
+    width: 430px;
 }
 
 
@@ -42,8 +51,14 @@ h1 {
 
 
 
-
-
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
 
 
 @keyframes fadein {
