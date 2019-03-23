@@ -10,10 +10,6 @@ html {
     -webkit-animation: fadein 3s; /* Safari and Chrome */
     -o-animation: fadein 3s; /* Opera */
 }
-h1 {
-    font-size: 55pt;
-    color: white;
-}
 a {
     font-size: 20pt;
     font-weight: bolder;
@@ -24,7 +20,16 @@ a {
     margin-bottom: 2px;
     margin-bottom: 2px;
     padding-top: 2px;
+    font-size: 55pt;
+    color: white;
 }
+a#header {
+    text-decoration: none;
+}
+a#header:hover {
+    color:#339933;
+}
+
 a.nav {
     text-decoration: none;
 }
@@ -35,7 +40,7 @@ a.nav:hover {
 }
 a.active {
     text-decoration: overline;
-    color: aliceblue;
+    color: #339933;
 }
 
 
