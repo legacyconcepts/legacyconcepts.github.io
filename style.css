@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 @import url('https://fonts.googleapis.com/css?family=Muli|Quicksand|Rubik+Mono+One');
 @import url('https://fonts.googleapis.com/css?family=GFS+Didot');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 .loading-message {
     text-align: center;
     font-size:10pt;
@@ -265,4 +266,11 @@ image1 {
 }
 .homepagequote {
     font-weight: bold;  
+}
+.graduationprjct {
+    font-family: 'Nunito';
+}
+.gradimage {
+    margin-left: auto;
+    width: 99%;
 }
