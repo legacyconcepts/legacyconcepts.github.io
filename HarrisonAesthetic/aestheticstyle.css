@@ -2,8 +2,8 @@ html {
     font-family: 'Arial';
     background-color: #336699;
     color: white;
-    margin-left: 12.5%;
-    margin-right:12.5%;
+    margin-left: 30%;
+    margin-right: 30%;
     animation: fadein 3s;
     animation: dropin 3s;
     -moz-animation: fadein 3s; /* Firefox */
