@@ -2,13 +2,15 @@ html {
     font-family: 'Arial';
     background-color: #336699;
     color: white;
-    margin-left: 30%;
-    margin-right: 30%;
     animation: fadein 3s;
     animation: dropin 3s;
     -moz-animation: fadein 3s; /* Firefox */
     -webkit-animation: fadein 3s; /* Safari and Chrome */
     -o-animation: fadein 3s; /* Opera */
+}
+.smallmargin {
+    margin-left: 30%;
+    margin-right: 30%;
 }
 a {
     font-size: 20pt;
@@ -41,6 +43,28 @@ a.nav:hover {
 a.active {
     text-decoration: overline;
     color: #339933;
+}
+#joshquote {
+    color: #339933;
+}
+.homelink {
+    text-decoration: none;
+    color: #339933;
+    background-color: white;
+    font-size: 13pt;
+    padding-bottom: 10px;
+    padding-right: 300%;
+}
+a.homelink:hover {
+    color: white;
+    background-color: #339933;
+}
+.invisibletext {
+    color: #336699;
+}
+#skipto {
+    font-size: 12pt;
+    font-weight: bold;
 }
 
 
