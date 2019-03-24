@@ -78,6 +78,13 @@ a.homelink:hover {
 .whitebg {
     background-color: white;
 }
+.learnabarial {
+    font-size: 12pt;
+}
+a.learnabarial:hover {
+    color: #336633;
+    background-color: white;
+}
 
 
 
