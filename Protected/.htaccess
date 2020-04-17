@@ -1,4 +1,5 @@
 legacyconcepts.github.io/Protected/.htaccess
+protected.html
 
 AuthUserFile legacyconcepts.github.io/podcast/.htpasswd
 AuthName "protected.html"
