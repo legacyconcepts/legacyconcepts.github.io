@@ -1,7 +1,7 @@
 username:MatthewHarrison
 MatthewHarrison:AprilJames410mattharrisoN
 
-AuthUserFile legacyconcepts.github.io/Protected/.htpasswd
+AuthUserFile legacyconcepts.github.io/podcast/.htpasswd
 AuthName "protected.html"
 AuthType Basic
 require valid-user
