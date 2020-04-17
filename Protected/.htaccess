@@ -1,5 +1,4 @@
-username:MatthewHarrison
-MatthewHarrison:AprilJames410mattharrisoN
+legacyconcepts.github.io/Protected/.htaccess
 
 AuthUserFile legacyconcepts.github.io/podcast/.htpasswd
 AuthName "protected.html"
