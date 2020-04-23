@@ -1,7 +1,0 @@
-legacyconcepts.github.io/Protected/.htaccess
-protected.html
-
-AuthUserFile /podcast/.htpasswd
-AuthName "protected.html"
-AuthType Basic
-require valid-user
