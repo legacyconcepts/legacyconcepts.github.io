@@ -30,6 +30,10 @@ a {
     text-decoration: none;
     color: cadetblue;
     font-family: 'Source Code Pro';
+    
+}
+a:hover {
+    color: burlywood;
 }
 #test {
     margin-top: 25px;
