@@ -1,0 +1,523 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Marty McCantfly</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+    
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+    
+     #test {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 6s;
+    -moz-animation: fadein 6s; /* Firefox */
+    -webkit-animation: fadein 6s; /* Safari and Chrome */
+    -o-animation: fadein 6s; /* Opera */
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="marty-mccantfly-or-why-devin-denardo-hates-emus" class="md-header-anchor"></a><span>Marty McCantfly </span><em><span>or</span></em><span> Why Devin Denardo Hates Emus.</span></h1><h5><a name="part-i" class="md-header-anchor"></a><span>Part I</span></h5><p><span>When Devin was just a young man, aged only 5, he decided it was time to gain some independence from the nuns who had raised him. It is important to note that they had always told him from the time he was found that he needed to be wary of the large Australian flightless birds known as emus. He listened and respected them, but simply because he respected them, and never truly owned the hatred of emus they had tried to instill in him from a young age. This all changed when he left home.</span></p><p><span>Before he went to Australia, Devin struck out to make it in Las Vegas Nevada. He thought if he worked hard enough, he could eventually become a famous member of a small group of non-nude strippers. (These strippers base their practices on the teaching of the Mormon book of wisdom - </span><em><span>Wise Words for the Faithful Stripper</span></em><span>.) He arrived on the LV strip on August 3rd, 1918, peak tourist season for the Nevada economy, and walked 8000 miles to the nearest rest stop, where he called an Uber, (this was long before albatross travel was pioneered the way it is today,) and rode in a small Model T Ford the rest of the way to the strip club he was applying for a job at. </span></p><p><span>He arrived and walked inside, only to be shocked at the realization that an emu, the very thing he had always pretended to hate, was behind the counter. Devin paused for a moment, took a small white pill he had found in the back of the Ford, and walked up to the desk. &quot;Hello, my name is Devin Denardo, I spoke with someone over the phone about a job here?&quot;</span></p><p><span>&quot;Yes. Who did you speak with?&quot; the large bird clipped.</span></p><p><span>&quot;A man named Marty?&quot; Devin responded, still tentatively. &quot;He said to ask for him when I came in.&quot;</span></p><p><span>&quot;I&#39;m Marty. Marty McCantfly.&quot; the emu stated flatly. &quot;I do remember speaking to you.&quot; Devin was slowly getting over his hesitation about speaking with this bird. He decided to give him a chance, despite the warning received from his nun mothers. The emu continued, &quot;Just take a room key and you can stay in the back until we find a cohort for you to be a part of.&quot;</span></p><p><span>Devin took the key handed to him and walked down a long hallway filled with doors. They were uncomfortably close together, so much so that Devin wondered if there was something fishy going on. &quot;You&#39;re actually the first non-emu we&#39;ve ever had join us here.&quot; the emu cut in behind Devin, startling him badly. He hadn&#39;t notice the bird following him down the hall, so hearing the emu speak was quite jarring. </span></p><p><span>&quot;Oh. I thought this was a group of non-nude strippers?&quot; Devin asked, &quot;How do you do that if you&#39;re all birds...&quot; Marty only laughed strangely to himself, and walked back to the front, leaving Devin to find his room himself. The key he was given said 44 on it, and he located the door with the same number after a few moments. The situation was made stranger by the fact that the numbers on the doors were not sequential. </span></p><p><span>He opened the door to find that his concern that the room would not be sufficiently sized was fairly valid. I went back straight, the same width as the door the whole way back. There was no bed, but there was a small toilet at the very back of the room and a sink built into the floor under it. The window directly above the toilet looked out on a beautiful lake, and Dev could see (presumably) happy emus splashing around in the water, boating around in canoes, and fishing off several small docks that lined one side of the lake. He was beginning to wonder what type of place he had come to.</span></p><h5><a name="part-ii" class="md-header-anchor"></a><span>Part II</span></h5><p><span>The next morning Devin awoke from a surprisingly good night of sleeping on the floor to a frantic squawking sound coming from just outside his window. He quickly sat up and looked out to see where the sound was coming from. To his surprise, there was a younger looking emu outside the window, doing what seemed like trying to get his attention. Devin opened the window and the large bird jumped through.</span></p><p><span>&quot;You&#39;ve got to help me.&quot; The bird exclaimed. &quot;They can&#39;t find me or I&#39;m gonna end up stuck.&quot; Devin&#39;s natural curiosity, that he had worked so hard to develop, was piqued. </span></p><p><span>&quot;What do you mean?&quot; He asked, expecting a much simpler answer than he got.</span></p><p><span>Over the next two hours, the bird, (whose name turned out to be Joe Passaro,) explained that he had come to what Devin now understood to be a cult retreat, expecting to have a quiet weekend away from his family, who tended to drive him crazy. When he had arrived, however, Marty had given him a small room like the one Devin was currently in, and Joe had asked why the pictures from the website did not look at all like the rooms. As the weekend progressed, Joe found himself being more and more controlled by Marty, until all he did was sit in Marty&#39;s office and run errands for him. It was at this point Joe dropped the biggest bombshell of all: he was not really an emu.</span></p><p><span>Devin was floored. He had never in his wildest dreams thought a human could be turned into a bird. He knew he had stumbled upon something very sinister, and vowed to Joe he would help him become human again and get the bottom of whatever scam Marty was apparently running. Devin and Joe decided Joe would stay in the room, while Devin went about whatever day Marty had planned for him, taking careful note of any exits and potential escapes for Joe to take.</span></p><p><span>Just as they finished deciding this, there was a peck at the door. Devin looked for a place to hide Jo, but it was too late, Marty was opening it with a spare key, and Devin was realizing that the purpose of the thin rooms was to prevent anyone from hiding in them. The door dully opened and Marty screeched when he saw Joe.</span></p><p><span>&quot;I knew it!&quot; he yelled. &quot;You&#39;re both going to regret this.&quot;</span></p><p><span>Devin was handcuffed and Joe was placed in a large cage. What seemed like hundreds of emu assistants shuttled them down the hallway so quickly Devin could not pay attention to the turns they were making. He only hoped they would be told exactly what was happening there before they were killed.</span></p><p><span>When they reached the room that they were being led to, Devin noticed Joe had been released from his cage and was walking with the other emu helpers, following Marty. He was also noticing now that Marty was much larger than the other emus, and had particularly thick and rich fur/plumage, which seemed to make him a natural leader in the sense that no one was questioning what he told them.</span></p><p><span>Devin was plopped down in a very comfortable leather armchair and offered a glass of water. He accepted, and watched as the emus, including Joe, all filed out the door, leaving only Devin and Marty in the room. Devin looked around. The ceiling was cavernous, and made entirely out of rich red wood, presumably mahogany, and there were bookshelves, paintings and maps of different parts of the world lining the walls. A large statue of what looked like an emu version of Buddha was sitting behind the desk Marty now occupied, and the shelves behind him were lined with beautiful volumes of exotic books, written in a language Devin had never seen before. The room smelled of sandalwood, leather and whiskey.</span></p><p><span>&quot;Well. You&#39;ve been quite the terrible guest.&quot; Marty began. &quot;But I&#39;m sure you&#39;d like to know what&#39;s going on here, so let me explain. We use this retreat as a training ground. You see, we are preparing for a war. Not on American soil, no. The Americans are far too powerful for us to have a chance against. But for far too long emus have been shunned. We have been kicked off land that was rightfully ours, and we want our own country. We have settled on Australia, as it will be easier for use to keep the entire continent insulated from humans. Joe was placed in your room to test you. Unfortunately we were listening the whole time, and I now know that you would betray me at a moments notice once you think a </span><em><span>human</span></em><span> can be helped. This is a flaw that seems to be unique to your kind, but you interestingly have a gullibility that does not exist in other species; by this I mean that despite undoubtedly being told your entire life not to trust emus, you still allowed me to place you in that ridiculous room and believed old Joe when he fed you his lies. Very disappointing I must say. We had higher hopes for you. In fact, there is an ancient prophesy, that an exceptionally handsome man would come to us, and if we could convert him, would be our best warrior ever. But if we could not, he would be the eventual downfall of our entire race.&quot;</span></p><p><span>When the monologue was over, Devin was speechless. All he could think about was how he had let the nuns down. They had tried his whole life to instill in him one core value: emus are always bad, but he had chosen to ignore it, thinking he knew best. Marty was still talking about his plans for the war, but Devin wasn&#39;t listening. All he could think about was getting back to his family. He looked up quickly when the emu said the word &quot;Fish.&quot; Devin jumped out of his chair, dove out the only window in the office and found himself hurtling toward the earth at the bottom of a sheer cliff. He looked up as he fell and saw the lake. He envisioned himself flying towards it, and as he thought of his nun mothers for what seemed like would be the last time, a single tear rolled down his cheek.</span></p><h5><a name="part-iii" class="md-header-anchor"></a><span>Part III</span></h5><p><span>Sunlight split through Devin&#39;s eyelid, and he put his hand up to block the painful light. After his eyes adjusted, he looked around around to realize he was in a hospital, but unlike any he had ever seen. His first thought was that the emus had gotten him, but this was quickly replaced with relief as a human nurse came into the room.</span></p><p><span>&quot;You had quite a fall there buddy.&quot; The tall male nurse said in a voice well practiced in giving off a reassuring bedside manner. Devin found the voice working on him, and he relaxed, knowing that he would see his family again.</span></p><p><span>&quot;Where am I?&quot; Devin mumbled. He didn&#39;t recognize anything around him, despite having been in the hospital the year before to have his tonsils and appendix removed for the third time. The nurse answered again in the calm, soothing voice.</span></p><p><span>&quot;You&#39;re in LA general hospital, you had to be airlifted here because of your condition, they weren&#39;t sure you would make it.&quot; Devin&#39;s head was spinning. The nurse pressed a small button and a pleasant tinkling sound filled the entire hospital. To Devin&#39;s surprise, the door opened again and four of the nuns filed into the room.</span></p><p><span>&quot;Oh our baby!&quot; They cooed as they surrounded him and began to weep. &quot;We didn&#39;t know if wee would ever see you again. They tell us if it weren&#39;t for the albatross...&quot;</span></p><p><span>&quot;What albatross?&quot; Devin cut in, &quot;All I remember is falling for so long...&quot; Then everything came back to him. The ground approaching rapidly, the sound of the wind, the breath being knocked out of him as he was plucked from the air. He remembered the sound of the birds wings flying him to the hospital, and the kind doctors assuring the albatross Devin was fine and he could leave. He had slipped into a coma at this point, and from what the nuns were now telling him, he had been out for almost a year. </span></p><p><span>&quot;You can come home now Devin.&quot; Mother Anna said to him. &quot;You&#39;re safe.&quot;</span></p><p><span>Over the next few days, Devin couldn&#39;t help but feel like something was wrong. He attributed this mostly to the fact that he hadn&#39;t eaten in almost a year and had lost about 3 pounds, so when the nuns suggested they go see a movie together, Devin said sure, hoping it would return his mind to some sense of normalcy.</span></p><p><span>The movie was fine, but midway through, Devin was having a hard time paying attention. There was a strange looking man moving slowly toward him and the three nuns he had gone to the theater with, and Devin was becoming uneasy. Just as he was about to whisper to Sister Cecelia that they needed to leave, the man ripped off his clothes, revealing himself to be an emu, pulled a knife out of his back feathers/fur and stabbed the nuns that were right next to Devin. Devin reacted quickly, and sprung at the bird, grabbing the knife from its beak to it was disarmed. He jumped up and stabbed the emu three times in its large body, as he recognized it as one of the aid emus that had helped usher him to Marty McCantfly&#39;s office back at the retreat. </span></p><p><span>Before the emu died, Devin grabbed him by the neck and demanded to know where Marty was. The emu croaked out, &quot;I&#39;ll never tell.&quot; Then promptly died.</span></p><p><span>Devin didn&#39;t pause before jumping up and running out into the street, crying the whole way. He wailed all the way back to the house, where he shared with the other nuns and told them what had happened. They mourned with him and went back to the movie theater to help id the bodies.</span></p><h5><a name="part-iv" class="md-header-anchor"></a><span>Part IV</span></h5><p><span>Devin didn&#39;t speak at the funeral, despite the nuns asking him multiple times to at least deliver a short eulogy. He stood back a bit, feeling rather out of place in the crowd of mourners. He was sad, but more than that, he couldn&#39;t shake the feeling that this was his fault. That the emu had done this because of him. He vowed there to take revenge. To slaughter every last emu he encountered, until finally, when all the rest were dead, he would find Marty McCantfly, and make him into his personal rodeo emu. Yes. That was a fate fitting for the bastard who murdered the only people Devin had ever loved.</span></p><p><span>And that, dear friends, is the story of how Devin Denardo grew to hate emus with the deepest passion capable with human emotions. There were many other escapades, and he eventually did find Marty, but that is a story for another time.</span></p></div>
+    
+    <div id="test">
+    <p><a href="../ShortStories/shortcollectionintro.html">Back</a></p></div>
+</body>
+</html>
