@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>MD 6-14-2020</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><p><strong><span>St. Peter Lutheran Church</span></strong></p><p><span>Order of Service</span></p><p><span>6.14.20</span></p><p><span> </span></p><p><strong><span>Welcome</span></strong></p><p><span> </span></p><p><strong><span>Opening Hymn</span></strong><span>: ‘Tis Good, Lord, to Be Here (#414)</span></p><p><span> </span></p><p><span>&#39;Tis good, Lord, to be here!</span></p><p><span>Your glory fills the night;</span></p><p><span>Your face and garments, like the sun,</span></p><p><span>Shine with unborrowed light.</span></p><p><span> </span></p><p><span>&#39;Tis good, Lord, to be here,</span></p><p><span>Your beauty to behold,</span></p><p><span>Where Moses and Elijah stand,</span></p><p><span>Your messengers of old.</span></p><p><span> </span></p><p><span>Fulfiller of the past!</span></p><p><span>Promise of things to be!</span></p><p><span>We hail your body glorified,</span></p><p><span>And our redemption see.</span></p><p><span> </span></p><p><span>Before we taste of death,</span></p><p><span>We see your kingdom come;</span></p><p><span>Before us keep your vision bright,</span></p><p><span>And make this place our home.</span></p><p><span> </span></p><p><span>&#39;Tis good, Lord, to be here!</span></p><p><span>Yet we may not remain;</span></p><p><span>But since you bid us leave the mount,</span></p><p><span>Come with us to the plain.</span></p><p><span> </span></p><p><strong><span>CONFESSION AND ABSOLUTION</span></strong></p><p><span> </span></p><p><strong><span>P</span></strong><span>: In the name of the Father and of the +Son and of the Holy Spirit</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Amen</span></p><p><span> </span></p><p><strong><span>P</span></strong><span>: If we say we have no sin, we deceive ourselves and the truth is not in us.</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: But if confess our sins, God, who is faithful and just, will forgive our sins and cleanse us from all unrighteousness</span></p><p><span> </span></p><p><em><span>(Brief moment for silent reflection)</span></em></p><p><span> </span></p><p><strong><span>P</span></strong><span>: Let us then confess our sins to God our Father</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Most merciful God, we confess that we are by nature sinful and unclean. We have sinned against you in thought, word, and deed, by what we have done and by what we have left undone. We have not loved you with our whole heart; we have not loved our neighbors as ourselves. We justly deserve your present and eternal punishment. For the sake of your son, Jesus Christ, have mercy on us. Forgive us, renew us, and lead us, so that we may delight in your will and walk in your ways to the glory of your holy name. Amen.</span></p><p><span> </span></p><p><strong><span>P</span></strong><span>: Almighty God in His mercy has given his son to die for you and for his sake forgives you all your sins. As a called and ordained servant of Christ, and by his authority, I therefore forgive you all your sins in the name of the Father and of the +Son and of the Holy Spirit</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Amen.</span></p><p><span> </span></p><p><strong><span>Time of sharing</span></strong></p><p><span> </span></p><p><strong><span>Worship song</span></strong><span>: 10,000 Reasons</span></p><p><span> </span></p><p><span>Chorus</span></p><p><span>Bless the Lord, Oh my soul</span></p><p><span>Oh my soul, worship his holy name</span></p><p><span>Sing like never before, Oh my soul</span></p><p><span>I&#39;ll worship your holy name</span></p><p><span> </span></p><p><span>Verse 1</span></p><p><span>The sun comes up, it&#39;s a new day dawning</span></p><p><span>It&#39;s time to sing your song again</span></p><p><span>Whatever may pass and whatever lies before me</span></p><p><span>Let me be singing when the evening comes [Chorus]</span></p><p><span> </span></p><p><span>Verse 2</span></p><p><span>You&#39;re rich in love and You&#39;re slow to anger</span></p><p><span>Your name is great and Your heart is kind</span></p><p><span>For all Your goodness, I will keep on singing</span></p><p><span>Ten thousand reasons for my heart to find [Chorus]</span></p><p><span> </span></p><p><span>Verse 3</span></p><p><span>And on that day when my strength is failing</span></p><p><span>The end draws near and my time has come</span></p><p><span>Still my soul will sing Your praise unending</span></p><p><span>Ten thousand years and then forevermore [Chorus]</span></p><p><span> </span></p><p><strong><span>SERVICE OF THE WORD</span></strong></p><p><span> </span></p><p><strong><span>Salutation</span></strong></p><p><span> </span></p><p><strong><span>P</span></strong><span>: The Lord by with you</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: And also with you</span></p><p><span> </span></p><p><strong><span>P</span></strong><span>: Let us pray. Almighty, eternal Word, in the Word of Your apostles and prophets You have proclaimed to us your saving will. Grant us faith to believe Your promises that we may receive eternal salvation; through Jesus Christ, our Lord, who lives and reigns with You and the Holy Spirit, one God, now and forever.</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Amen</span></p><p><span> </span></p><p><strong><span>Old Testament or First Reading:</span></strong><span> Exodus 19:2-8</span></p><p><span> </span></p><p><strong><span>2</span></strong><span> They set out from Rephidim and came into the wilderness of Sinai, and they encamped in the wilderness. There Israel encamped before the mountain, </span><strong><span>3</span></strong><span> while Moses went up to God. The Lord called to him out of the mountain, saying, “Thus you shall say to the house of Jacob, and tell the people of Israel: </span><strong><span>4</span></strong><span> ‘You yourselves have seen what I did to the Egyptians, and how I bore you on eagles&#39; wings and brought you to myself. </span><strong><span>5</span></strong><span> Now therefore, if you will indeed obey my voice and keep my covenant, you shall be my treasured possession among all peoples, for all the earth is mine; </span><strong><span>6</span></strong><span> and you shall be to me a kingdom of priests and a holy nation.’ These are the words that you shall speak to the people of Israel.”</span></p><p><span> </span></p><p><strong><span>7</span></strong><span> So Moses came and called the elders of the people and set before them all these words that the Lord had commanded him. </span><strong><span>8</span></strong><span> All the people answered together and said, “All that the Lord has spoken we will do.” And Moses reported the words of the people to the Lord.</span></p><p><span> </span></p><p><strong><span>Epistle or Second Reading:</span></strong><span> Romans 5:6-15</span></p><p><span> </span></p><p><strong><span>6</span></strong><span> For while we were still weak, at the right time Christ died for the ungodly. </span><strong><span>7</span></strong><span> For one will scarcely die for a righteous person—though perhaps for a good person one would dare even to die— </span><strong><span>8</span></strong><span> but God shows his love for us in that while we were still sinners, Christ died for us. </span><strong><span>9</span></strong><span> Since, therefore, we have now been justified by his blood, much more shall we be saved by him from the wrath of God. </span><strong><span>10</span></strong><span> For if while we were enemies we were reconciled to God by the death of his Son, much more, now that we are reconciled, shall we be saved by his life. </span><strong><span>11</span></strong><span> More than that, we also rejoice in God through our Lord Jesus Christ, through whom we have now received reconciliation.</span></p><p><span> </span></p><p><strong><span>12</span></strong><span> Therefore, just as sin came into the world through one man, and death through sin, and so death spread to all men because all sinned— </span><strong><span>13</span></strong><span> for sin indeed was in the world before the law was given, but sin is not counted where there is no law. </span><strong><span>14</span></strong><span> Yet death reigned from Adam to Moses, even over those whose sinning was not like the transgression of Adam, who was a type of the one who was to come.</span></p><p><strong><span>15</span></strong><span> But the free gift is not like the trespass. For if many died through one man&#39;s trespass, much more have the grace of God and the free gift by the grace of that one man Jesus Christ abounded for many.</span></p><p><strong><span>Holy Gospel</span></strong></p><p><span> </span></p><p><strong><span>P</span></strong><span>: The Holy Gospel according to St. Matthew, the 9th chapter.</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Glory to you, O Lord</span></p><p><span> </span></p><p><strong><span>35</span></strong><span> And Jesus went throughout all the cities and villages, teaching in their synagogues and proclaiming the gospel of the kingdom and healing every disease and every affliction. </span><strong><span>36</span></strong><span> When he saw the crowds, he had compassion for them, because they were harassed and helpless, like sheep without a shepherd. </span><strong><span>37</span></strong><span> Then he said to his disciples, “The harvest is plentiful, but the laborers are few; </span><strong><span>38</span></strong><span> therefore pray earnestly to the Lord of the harvest to send out laborers into his harvest.”</span></p><p><span> </span></p><p><span>And he called to him his twelve disciples and gave them authority over unclean spirits, to cast them out, and to heal every disease and every affliction. </span><strong><span>2</span></strong><span> The names of the twelve apostles are these: first, Simon, who is called Peter, and Andrew his brother; James the son of Zebedee, and John his brother; </span><strong><span>3</span></strong><span> Philip and Bartholomew; Thomas and Matthew the tax collector; James the son of Alphaeus, and Thaddaeus; </span><strong><span>4</span></strong><span> Simon the Zealot, and Judas Iscariot, who betrayed him.</span></p><p><span> </span></p><p><strong><span>5</span></strong><span> These twelve Jesus sent out, instructing them, “Go nowhere among the Gentiles and enter no town of the Samaritans, </span><strong><span>6</span></strong><span> but go rather to the lost sheep of the house of Israel. </span><strong><span>7</span></strong><span> And proclaim as you go, saying, ‘The kingdom of heaven is at hand.’ </span><strong><span>8</span></strong><span> Heal the sick, raise the dead, cleanse lepers, cast out demons. You received without paying; give without pay. </span><strong><span>9</span></strong><span> Acquire no gold or silver or copper for your belts, </span><strong><span>10</span></strong><span> no bag for your journey, or two tunics or sandals or a staff, for the laborer deserves his food. </span><strong><span>11</span></strong><span> And whatever town or village you enter, find out who is worthy in it and stay there until you depart. </span><strong><span>12</span></strong><span> As you enter the house, greet it. </span><strong><span>13</span></strong><span> And if the house is worthy, let your peace come upon it, but if it is not worthy, let your peace return to you. </span><strong><span>14</span></strong><span> And if anyone will not receive you or listen to your words, shake off the dust from your feet when you leave that house or town. </span><strong><span>15</span></strong><span> Truly, I say to you, it will be more bearable on the day of judgment for the land of Sodom and Gomorrah than for that town.</span></p><p><span> </span></p><p><strong><span>16</span></strong><span> “Behold, I am sending you out as sheep in the midst of wolves, so be wise as serpents and innocent as doves. </span><strong><span>17</span></strong><span> Beware of men, for they will deliver you over to courts and flog you in their synagogues, </span><strong><span>18</span></strong><span> and you will be dragged before governors and kings for my sake, to bear witness before them and the Gentiles. </span><strong><span>19</span></strong><span> When they deliver you over, do not be anxious how you are to speak or what you are to say, for what you are to say will be given to you in that hour. </span><strong><span>20</span></strong><span> For it is not you who speak, but the Spirit of your Father speaking through you.</span></p><p><span> </span></p><p><strong><span>P</span></strong><span>: This is the Gospel of the Lord.</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Praise to you, O Christ.</span></p><p><span> </span></p><p><strong><span>Hymn of the Day:</span></strong><span> Beautiful Savior</span></p><p><span> </span></p><p><span>Beautiful Savior, King of creation, </span></p><p><span>Son of God and Son of Man! </span></p><p><span>Truly I&#39;d love Thee, truly I&#39;d serve thee, </span></p><p><span>Light of my soul, my Joy, my Crown.</span></p><p><span> </span></p><p><span>Fair are the meadows, Fair are the woodlands, </span></p><p><span>Robed in flow&#39;rs of blooming spring;</span></p><p><span>Jesus is fairer, Jesus is purer; </span></p><p><span>He makes our sorr&#39;wing spirit sing. </span></p><p><span> </span></p><p><span>Fair is the sunshine, Fair is the moonlight, </span></p><p><span>Bright the sparkling stars on high; </span></p><p><span>Jesus shines brighter, Jesus shines purer </span></p><p><span>Than all the angels in the sky. </span></p><p><span> </span></p><p><span>Beautiful Savior, Lord of the nations,</span></p><p><span>Son of God and Son of Man! </span></p><p><span>Glory and honor, Praise, adoration, </span></p><p><span>Now and forevermore be Thine!</span></p><p><span> </span></p><p><strong><span>Sermon</span></strong></p><p><span> </span></p><p><strong><span>Prayer of the Church</span></strong></p><p><span> </span></p><p><strong><span>Worship Song</span></strong><span>: Lord I Need You</span></p><p><span> </span></p><p><span>Lord, I come, I confess</span></p><p><span>Bowing here I find my rest</span></p><p><span>Without You I fall apart</span></p><p><span>You&#39;re the One that guides my heart</span></p><p><span> </span></p><p><span>Chorus</span></p><p><span>Lord, I need You, oh, I need You</span></p><p><span>Every hour I need You</span></p><p><span>My one defense, my righteousness</span></p><p><span>Oh God, how I need You</span></p><p><span> </span></p><p><span>Where sin runs deep Your grace is more</span></p><p><span>Where grace is found is where You are</span></p><p><span>Where You are, Lord, I am free</span></p><p><span>Holiness is Christ in me [Chorus]</span></p><p><span>Bridge</span></p><p><span>So teach my song to rise to You</span></p><p><span>When temptation comes my way</span></p><p><span>When I cannot stand I&#39;ll fall on You</span></p><p><span>Jesus, You&#39;re my hope and stay [Chorus]</span></p><p><span> </span></p><p><strong><span>Collect</span></strong></p><p><span> </span></p><p><span>P: Let us pray. Blessed Lord, You have caused all Holy Scriptures to be written for our learning. Grant that we may so hear them, read, mark, learn, and inwardly digest them that, by patience and comfort of Your holy Word, we may embrace and ever hold fast the blessed hope of everlasting life; through Jesus Christ, our Lord.</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Amen </span></p><p><span> </span></p><p><strong><span>Lord&#39;s Prayer</span></strong><span> </span></p><p><span> </span></p><p><strong><span>P</span></strong><span>: Lord remember us in your kingdom and teach us to pray...</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Our father, who art in heaven, hallowed be thy name, thy kingdom com, they will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. For thine is the kingdom, and the power, and the glory, forever and ever. Amen  </span></p><p><span> </span></p><p><strong><span>Benediction</span></strong></p><p><span>The Lord bless you and keep you.</span></p><p><span>The Lord make his face shine on you and be gracious to you.</span></p><p><span>The Lord look upon you with favor and give you peace.</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Amen </span></p><p><span> </span></p><p><strong><span>Closing Hymn</span></strong><span>: My Hope is Built on Nothing Less</span></p><p><span> </span></p><p><span>My hope is built on nothing less</span></p><p><span>than Jesus&#39; blood and righteousness;</span></p><p><span>I dare not trust the sweetest frame,</span></p><p><span>but wholly lean on Jesus&#39; name.</span></p><p><span> </span></p><p><span>Refrain:</span></p><p><span>On Christ, the solid rock, I stand;</span></p><p><span>all other ground is sinking sand,</span></p><p><span>all other ground is sinking sand.</span></p><p><span> </span></p><p><span>When darkness veils his lovely face,</span></p><p><span>I rest on his unchanging grace;</span></p><p><span>in ev&#39;ry high and stormy gale,</span></p><p><span>my anchor holds within the veil. [Refrain]</span></p><p><span> </span></p><p><span>His oath, his covenant, his blood</span></p><p><span>support me in the whelming flood;</span></p><p><span>when all around my soul gives way,</span></p><p><span>he then is all my hope and stay. [Refrain]</span></p><p><span> </span></p><p><span>When he shall come with trumpet sound,</span></p><p><span>O may I then in him be found,</span></p><p><span>dressed in his righteousness alone,</span></p><p><span>faultless to stand before the throne. [Refrain]</span></p><p><span> </span></p><p><strong><span>P</span></strong><span>: Go in peace, serve the Lord.</span></p><p><span> </span></p><p><strong><span>C</span></strong><span>: Thanks be to God</span></p><p><span> </span></p></div>
+</body>
+</html>
